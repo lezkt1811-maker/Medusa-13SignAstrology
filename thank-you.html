@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://nominatim.openstreetmap.org https://timeapi.io https://starchart13-fulfillment.lezkt1811.workers.dev https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; object-src 'none'; base-uri 'self';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M2TKEEQX6J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-M2TKEEQX6J");</script>
+<title>Reading Request Received | Medusa Astrology</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@500;700;800;900&display=swap');
+:root{
+  --bg:#06001a; --card:#0d0025; --border:#3a1a66; --ink:#e8e0ff; --muted:#a090cc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#06001a; color:var(--ink); font-family:Trebuchet MS,sans-serif; min-height:100vh;
+  background-image:
+    radial-gradient(ellipse at 15% 8%, rgba(155,77,255,0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 12%, rgba(255,170,0,0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(100,20,200,0.12) 0%, transparent 60%);
+}
+.wrap{max-width:520px;margin:0 auto;padding:32px 18px 60px;}
+h1{
+  font-family:Montserrat,sans-serif; font-size:clamp(22px,6vw,30px); font-weight:900; text-align:center;
+  color:#ffd700; text-shadow:0 0 20px rgba(255,215,0,0.4), 0 0 40px rgba(155,77,255,0.3); margin-bottom:8px;
+}
+.sub{text-align:center; color:var(--muted); font-size:14px; margin-bottom:28px; line-height:1.6;}
+.card{
+  background:linear-gradient(180deg, rgba(123,47,255,.08), rgba(204,68,255,.03));
+  border:1px solid rgba(155,77,255,.4); border-radius:16px; padding:22px; margin-bottom:16px;
+  box-shadow:0 10px 60px rgba(0,0,0,.75), 0 0 30px rgba(155,77,255,0.08);
+}
+.order-label{font-family:Montserrat,sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#00e5ff; margin-bottom:8px;}
+.order-id{font-family:'Courier New',monospace; font-size:26px; font-weight:900; color:#fff; letter-spacing:.04em; word-break:break-all;}
+
+.payment-note-box{
+  margin-top:16px; padding:14px 16px; border-radius:12px;
+  background:rgba(0,0,0,.35); border:1px dashed rgba(0,229,255,.45);
+}
+.payment-note-label{font-family:Montserrat,sans-serif; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#00e5ff; margin-bottom:6px;}
+.payment-note-text{font-family:'Courier New',monospace; font-size:15px; color:#fff; word-break:break-word; margin-bottom:10px;}
+
+.btn{
+  display:block; width:100%; text-align:center; padding:15px 18px; border-radius:14px; border:none;
+  font-family:Montserrat,sans-serif; font-weight:900; font-size:15px; letter-spacing:.04em; cursor:pointer;
+  text-decoration:none; margin-top:12px;
+}
+.btn-cash{
+  background:linear-gradient(135deg,rgba(255,0,150,.55),rgba(255,0,200,.4)); border:2px solid #ff2bd6; color:#fff;
+  box-shadow:0 0 20px rgba(255,43,214,.7);
+}
+.btn-copy{background:rgba(0,229,255,.14); border:2px solid #00e5ff; color:#00e5ff; margin-top:0;}
+.btn-copy.copied{background:rgba(0,255,136,.14); border-color:#00ff88; color:#00ff88;}
+.btn-back{background:rgba(255,255,255,.05); border:2px solid rgba(255,255,255,.2); color:var(--ink);}
+
+.copy-message{
+  display:none; margin-top:12px; padding:11px 14px; border-radius:10px; text-align:center;
+  background:rgba(0,255,136,.1); border:1px solid rgba(0,255,136,.4); color:#00ff88;
+  font-size:13px; line-height:1.5;
+}
+.copy-message.show{display:block;}
+
+.reminder{font-size:13px; color:var(--muted); line-height:1.6; margin-top:14px; padding-top:14px; border-top:1px dashed rgba(155,77,255,.3);}
+.contact{font-size:12.5px; color:var(--muted); line-height:1.6; text-align:center; margin-top:18px;}
+.contact a{color:#00e5ff;}
+:focus-visible{outline:2px solid #00e5ff; outline-offset:2px;}
+@media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Your Reading Request Has Been Received</h1>
+  <p class="sub">Your reading request has been submitted. Complete your $25 Cash App payment to finish your order.</p>
+
+  <div class="card">
+    <div class="order-label">Order Number</div>
+    <div class="order-id" id="orderId">—</div>
+
+    <div class="payment-note-box">
+      <div class="payment-note-label">Payment note</div>
+      <div class="payment-note-text" id="paymentNoteText">—</div>
+      <button class="btn btn-copy" id="copyNoteBtn">Copy Payment Note</button>
+    </div>
+
+    <button class="btn btn-copy" id="copyBtn">Copy Order Number</button>
+    <button class="btn btn-cash" id="payCashAppBtn">Copy Payment Note &amp; Pay $25</button>
+
+    <div class="copy-message" id="copyMessage" aria-live="polite"></div>
+
+    <div class="reminder">
+      Include your Medusa Astrology order number and referral code in the Cash App payment note so I can match your payment to your reading and credit the right promoter.
+    </div>
+  </div>
+
+  <p class="contact">
+    Need to correct your name, birth date, birth time, or location? Email
+    <a id="contactLink" href="#">this address</a> and include your order number.
+  </p>
+
+  <a class="btn btn-back" href="index.html">&larr; Back to Medusa Astrology</a>
+</div>
+
+<script src="reading-config.js"></script>
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const order = params.get("order") || "Not found — check your email or contact us";
+  document.getElementById("orderId").textContent = order;
+
+  /* ---------- Resolve referral code: URL param (from the actual submitted order) first, ---------- */
+  /* ---------- falling back to a still-valid stored referral, then DIRECT. Never typed by the customer. ---------- */
+  function sc13ResolveReferralCode(){
+    const fromUrl = params.get("ref");
+    if(fromUrl) return fromUrl.trim().toUpperCase();
+    try{
+      const key = (typeof READING_SALES_CONFIG !== "undefined" && READING_SALES_CONFIG.referralStorageKey) || "starchart13_referral";
+      const raw = localStorage.getItem(key);
+      if(raw){
+        const rec = JSON.parse(raw);
+        if(rec && rec.code && typeof rec.expiresAt === "number" && rec.expiresAt > Date.now()){
+          return String(rec.code).toUpperCase();
+        }
+      }
+    }catch(e){ /* localStorage unavailable — fall through to DIRECT */ }
+    return "DIRECT";
+  }
+
+  const referralCode = sc13ResolveReferralCode();
+  const paymentNote = order + " | REF: " + referralCode;
+  document.getElementById("paymentNoteText").textContent = paymentNote;
+
+  let cashAppUrl = "https://cash.app/pay/link/au85j9vj";
+  try{
+    if(READING_SALES_CONFIG.cashAppPaymentUrl) cashAppUrl = READING_SALES_CONFIG.cashAppPaymentUrl;
+  }catch(e){}
+
+  try{
+    const email = READING_SALES_CONFIG.contactEmail;
+    if(email && email.indexOf("REPLACE_WITH") !== 0){
+      document.getElementById("contactLink").href = "mailto:" + email;
+      document.getElementById("contactLink").textContent = email;
+    }
+  }catch(e){}
+
+  /* ---------- Safe clipboard copy with fallback ---------- */
+  function sc13FallbackCopy(text){
+    try{
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.top = "-9999px";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, text.length);
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      if(ok) return true;
+    }catch(e){ /* fall through */ }
+    try{ window.prompt("Copy this payment note:", text); }catch(e){}
+    return false;
+  }
+  function sc13Copy(text){
+    return new Promise(function(resolve){
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ resolve(true); }).catch(function(){
+          resolve(sc13FallbackCopy(text));
+        });
+      } else {
+        resolve(sc13FallbackCopy(text));
+      }
+    });
+  }
+
+  function sc13FlashCopied(btn, restoreLabel){
+    btn.textContent = "Copied ✓";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = restoreLabel; btn.classList.remove("copied"); }, 1800);
+  }
+
+  /* "Copy Order Number" now copies the complete payment note (order ID + referral code) */
+  document.getElementById("copyBtn").addEventListener("click", function(){
+    const btn = this;
+    sc13Copy(paymentNote).then(function(){ sc13FlashCopied(btn, "Copy Order Number"); });
+  });
+
+  /* Dedicated "Copy Payment Note" button beneath the visible note */
+  document.getElementById("copyNoteBtn").addEventListener("click", function(){
+    const btn = this;
+    sc13Copy(paymentNote).then(function(){ sc13FlashCopied(btn, "Copy Payment Note"); });
+  });
+
+  /* Main Cash App button: copy note -> show confirmation message -> then open Cash App */
+  document.getElementById("payCashAppBtn").addEventListener("click", function(){
+    const msg = document.getElementById("copyMessage");
+    sc13Copy(paymentNote).then(function(){
+      msg.textContent = "Payment note copied. Paste it into the Cash App note field.";
+      msg.classList.add("show");
+      setTimeout(function(){
+        window.location.href = cashAppUrl;
+      }, 700);
+    });
+  });
+})();
+</script>
+</body>
+</html>
