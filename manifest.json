@@ -1,0 +1,17 @@
+{
+  "name": "Medusa Astrology",
+  "short_name": "Medusa",
+  "description": "Women- and Crone-centered 13-sign true-sky birth chart with Ophiuchus, Algol and the Lilith-Eve axis.",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "id": "/Medusa-13SignAstrology/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#04060A",
+  "theme_color": "#04060A",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
